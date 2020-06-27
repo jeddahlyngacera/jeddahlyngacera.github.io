@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Labor - Learning and Building on Reviews</title>
+		<title>Reddit, Set, Go: Deciphering What Redditors Are Really Looking For</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="icon" href="../../images/icon.svg">
@@ -29,49 +29,64 @@
 							<article class="post" style="margin: 0 5% 1% 5%">
 								<header>
 									<div class="title">
-										<h2>LABOR – Learning and Building on Reviews</h2>
-										<p>Hybrid NLP Models for Sentiment Prediction</p>
+										<h2>Reddit, Set, Go: Deciphering What Redditors Are Really Looking For</h2>
+										<p>Frequent Itemset Mining (FIM) and Association Rule Mining (ARM) Analysis on Big Data</p>
 									</div>
 									<div class="meta">
-										<time class="published" datetime="2019-12-12">December 12, 2019</time>
+										<time class="published" datetime="2019-12-05">December 05, 2019</time>
+										<a href="https://www.linkedin.com/in/crisanto-chua-20691034/" class="author"><span class="name">Crisanto Chua</span></a>
+										<a href="https://www.linkedin.com/in/armand-de-leon-703570136/" class="author"><span class="name">Armand Louis De Leon</span></a>
+										<a href="https://www.linkedin.com/in/riaflora/" class="author"><span class="name">Ria Ysabelle Flora</span></a>
 										<a href="https://www.linkedin.com/in/jeddahlyn-gacera/" class="author"><span class="name">Jeddahlyn Gacera</span></a>
 									</div>
 								</header>
 								<video width="100%" controls style="margin-bottom: 1em;">
-									<source src="labor-presentation.mp4" type="video/mp4">
+									<source src="reddit-phr4r-presentation.mp4" type="video/mp4">
 									Your browser does not support the video tag.
 								</video>
-								<h3>Summary/Abstract</h3>
-								<p>
-									Employee management is one of the most important functions within an organization. Recent studies have shown that employee perceptions of culture, current management, opportunities for growth, and other intangible factors are correlated to a company’s financial well-being. Therefore, it is very important that managers are able to develop necessary skills to effectively connect with employees. It has also given a new dimension to human resource management from being reactionary (i.e. solving employee complaints, etc.) to a more proactive role (giving insights that help in creating policies that prevent or minimize employee dissatisfaction). In this paper, we explore models that predict employee sentiment based on text gathered in employee review data from Glassdoor.com. With the models we have developed, which accurately predict employee sentiment and give insights on what push these ratings, we now are able to provide organizations a new way of better understanding their employees, via internal quarterly reviews or through employee comments in their in-house networks.
-								</p>
-								<h3>Introduction</h3>
-								<p>
-									High employee turnover is one of the biggest challenges faced by businesses today regardless of location, size, nature or business strategy. According to a 2013 study by consumer credit reporting agency, Equifax, 40% of employees who leave their jobs do so within six months of starting a position (Paul, 2013). If this is not addressed organizational cost expenditure will proportionately increase (Ali, 2009).<br>
-
-									In another study published in 2017, 42% of millennials expect to change jobs every 1 to 3 years, at the very least (Jobvite, 2017). However, what is more disturbing is the fact that in a survey conducted in 2017, only 9% of senior managers believe that turnover is an urgent issue (Pollock, 2017).<br>
-									
-									Online career websites such as Glassdoor.com have provided valuable information on how employees view their current and previous companies and the reasons why they think highly or poorly of them through reviews. The problem however is its qualitative nature which makes it difficult to compare the experience to other companies just based on the text review. A translation of the qualitative review to a quantitative metric can help bridge the gap. Although Glassdoor.com already has the option of adding a quantitative rating (1-5 stars, 5 being the highest), sometimes the rate chosen is not reflective of the actual sentiment of the employee.<br>
-									
-									The goal of the study is to predict quantitative ratings of companies with the use of sentiment analysis on the qualitative text reviews. The model produced could potentially help companies rate themselves accurately with internally generated text reviews or assist other company rating platforms who don’t have quantitative rating schemes transform these into numerical ratings that are based on the same metric.<br>
+								<h3>Executive Summary</h3>
+								<p align="justify">
+									Given the privilege of anonymity, Reddit has always been a platform that enabled its users to explicitly post about what they want, with special subreddits being created for several niche topics. Subreddits catering to these are often tagged as r4r or redditor-for-redditor and with that, the aim of this study is to extract all the information on the posts from the Philippine-based subreddit r/phr4r to paint a clearer picture of the dating and hook-up culture in the Philippines. Collection of the data was done through an updated source in Jojie. Frequent Itemset Mining (FIM) and Association Rule Mining (ARM) was employed to extract the most frequently occurring verbs, adjectives, and nouns from individual posts. Data points were identified according to gender, age, and sexual orientation due to the consistent topic name formatting imposed in the subreddit. The demographic information combined with the FIM and ARM output was used for the profiling of different age groups or sexual orientation to create a more granular analysis.
 								</p>
 								<h3>Methodology</h3>
-								<p>
-									This study is an exploration of the possibilities of creating hybrid NLP models for predictions: using both word embeddings and other numerical features to make a classification prediction. The main reason this is not possible without neural networks (specifically embedding models) is because conventional bag of words creates sparse vector representations of words. This sparse representation makes it such that adding other features to the matrix would have little to no impact.<br>
-
-									To achieve this, the vector representation of the numerical features is added to the word vector created from word embeddings. The numerical features are probabilities resulting from topic modeling through LDA. A neural network is then trained to make predictions on whether a job review is negative, neutral, or positive.<br>
-
-									The implementation of our models is based on two different libraries in Python. The topic modeling through LDA was done through the gensim library, which features extensive functionality for more updated NLP methods. Meanwhile, word Embedding and the Stacked GRU were implemented through Tensorflow Keras.
-								</p>
+								<p style="margin-bottom: 0;">The following steps were taken for this study:</p>
+								<ol>
+									<li>
+										Data Description and Collection
+										<ul style="margin-bottom: 0;">
+											<li>Data gathering</li>
+											<li>Text data</li>
+										</ul>
+									</li>
+									<li>
+										Data Cleaning and Preprocessing
+										<ul style="margin-bottom: 0;">
+											<li>POS tagging</li>
+											<li>N-grams</li>
+										</ul>
+									</li>
+									<li>Exploratory Data Analysis</li>
+									<li>Profiling</li>
+									<li>
+										Data Mining
+										<ul>
+											<li>Frequent Itemset Mining</li>
+											<li>Association Rule Mining</li>
+										</ul>
+									</li>
+								</ol>
 								<footer>
 									<ul class="actions">
-										<li><a href="https://github.com/jeddahlyngacera/labor-glassdoor" class="button">See code in GitHub</a></li>
+										<li><a href="https://github.com/jeddahlyngacera/reddit-phr4r/blob/master/reddit-phr4r.md" class="button">See code in GitHub</a></li>
 									</ul>
 								</footer>
-								<h3>AIM MSDS Deep Learning Project Presentation (December 12, 2019)</h3>
+								<h3>AIM MSDS Big Data and Cloud Computing Project Presentation (December 05, 2019)</h3>
+								
 								<img src="LT4_1.jpg" width="49.8%" alt="LT4">
 								<img src="LT4_2.jpg" width="49.8%" alt="LT4">
 								<h4>Learning Team 4</h4>
+								<p style="font-size: 0.8em;">(First picture: from left to right) Crisanto E. Chua, Armand Louis A. De Leon, Jeddahlyn V. Gacera, Ria Ysabelle L. Flora</p>
+								
 							</article>
 					</div>
 
