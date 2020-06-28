@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Quantifying the Strength of Political Bailiwicks Using Network Science</title>
+		<title>Recommending Audiobooks for Drivers and Commuters Stuck in Traffic in Metro Manila</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="icon" href="../../images/icon.svg">
@@ -29,55 +29,51 @@
 							<article class="post" style="margin: 0 5% 1% 5%">
 								<header>
 									<div class="title">
-										<h2>Quantifying the Strength of Political Bailiwicks Using Network Science</h2>
-										<p>Bailiwicks Bipartite Network Analysis</p>
+										<h2>Recommending Audiobooks for Drivers and Commuters Stuck in Traffic in Metro Manila</h2>
+										<p>Frequent Itemset Mining (FIM) and ML Modelling Using PySpark</p>
 									</div>
 									<div class="meta">
-										<time class="published" datetime="2020-03-12">March 12, 2020</time>
-										<a href="https://www.linkedin.com/in/rjrroberto/" class="author"><span class="name">Roy Joseph Roberto</span></a>
+										<time class="published" datetime="2019-12-29">December 29, 2019</time>
+										<a href="https://www.linkedin.com/in/crisanto-chua-20691034/" class="author"><span class="name">Crisanto Chua</span></a>
 										<a href="https://www.linkedin.com/in/jeddahlyn-gacera/" class="author"><span class="name">Jeddahlyn Gacera</span></a>
 									</div>
 								</header>
-								<video width="75%" controls style="margin-bottom: 1em;">
-									<source src="bailiwicks-network-presentation.mp4" type="video/mp4">
-									Your browser does not support the video tag.
-								</video>
 								<h3>Abstract</h3>
 								<p align="justify">
-									Political analysts observe how bailiwicks—or more popularly known as balwartes in the Philippines—weaken over time, primarily because of a number of factors: vote shift towards the end of the campaign, a candidate’s weak local presence, social survey results, and media exposure. Studies have it that, at least in local politics, bailiwicks and party affiliations are weakly established and are often overridden by informal alliances. This research paper aims to reaffirm this observation through network science; that is, by creating a bipartite network structure using cities and politicians as nodes and an arbitrarily determined ratio as the edge weight. Specifically, this study aims to explore a new way to quantify the strength of political strongholds and use eigenvector and betweenness centrality measures to determine the most influential figures in an area of political jurisdiction for potential alliance formation.
+									To go from one place to another, a person needs to commute either by private car or public transport in order to reach their destination. This is an essential part of being a member of society. The problem faced by most individuals, especially those living in Metro Manila, is that it takes too long to arrive in the desired location because of the worsening traffic situation. A minimum of 1 hour and 6 minutes is lost because of the daily commute. This unproductive time can be regained by listening to audible books while driving or riding public transport. This study presents a different approach of recommending books for audible conversion which is based on textual reviews. The text reviews, which were collected from the Amazon Customer Reviews Dataset available in the Registry of Open Data on AWS (<a href="https://registry.opendata.aws/amazon-reviews/">https://registry.opendata.aws/amazon-reviews/</a>), specifically the Books product category, were used to predict whether the book would be a possible candidate for conversion to an audible using different machine learning models. Four different algorithms were compared to predict whether the book is a candidate for conversion to audible format. Gradient Boosted Tree Classifier was the best model with a 91.7% PR-AUC. Further analysis was done for what books are most popular through Frequent Itemset Mining (FIM). The predictive model together with the insights gathered from FIM will provide future audible service companies in the Philippines an efficient system of qualifying new books for their subscribers.
 								</p>
 								<h3>Introduction</h3>
 								<p align="justify">
-									Literally speaking, a bailiwick refers to a geographical area over which someone has legal or political control. The term traces its roots from the combination of the Old English term bailiff, meaning a local officer with certain powers, and wic, meaning village. However, at least in the context of this research paper, bailiwick or what is more commonly known as balwarte in the Philippines, refers to an area of jurisdiction, where political clans can win the popular vote even in the absence of an aggressive and expensive election campaign. Hometowns, for instance, are perfect examples of bailiwicks. According to Prospero de Vera III from the of the UP National College of Public Administration and Governance, bailiwicks are supposed to consistently deliver votes for candidates even if they don’t spend a lot of time or aggressively campaign in that area, or even without aggressively buying votes.<br><br>
+									Metro Manila is one of the most congested cities in the world. Its 13 million population is squeezed into just 620 square kilometers, a density of more than 21,000 inhabitants per one kilometer of living space. This has led to a traffic problem that has one expat describing Metro Manila “unlivable” because of the traffic situation.<br><br>
 
-									However, a number of political analysts argue that the power and strength of bailiwicks are gradually fading away—and that is for several reasons. There appears to be an observable shift of votes as the campaign nears conclusion. It might as well be attributed to the weak presence of candidates in the localities where they thought they were strong. Social survey results and media exposure are also a factor of influence. In the 2010 national polls, for example, only 2 out of 10 presidential candidates won the popular votes in their respective strongholds. Former president Benigno Aquino III won in Tarlac while former senator Manny Villar won in Las Piñas. Aquino and Villar both represented their congressional districts for nearly a decade before they were elected as senators and later presidential aspirants. Similarly, only 2 out of 10 vice presidential candidates were not junked in their respective hometowns.
+									According to a traffic study conducted by Boston Consulting Group (BCG) for ride-hailing platform Uber in 2016, the average Filipino is stuck in traffic an hour and six minutes (66 minutes) a day, equivalent to 16 days of lost productivity time per year (Pena, 2017). This translates to a staggering 100,000 pesos in lost income per year. It will be difficult to solve the traffic situation given the limited resources available but what could be done in the short term is to provide options to people stuck in traffic on how to be productive. One of the suggested ways to make up for this time “lost” in traffic is for them to listen to audible books. Books that will help commuters expand their knowledge, hence make their commute more productive.<br><br>
+
+									With the advancement of technology and increased internet bandwidth, more and more people have access to information on the go. Digital media now makes it possible for individuals to easily listen or read from their mobile devices in transit which has led to an increase in the consumption of e-books and audiobooks. The problem arises with using them to read eBooks for an extended period is that it could cause several health problems such as stress and neck pain. (Shimray, 2015)<br><br>
+
+									Of particular interest and relevant to our study is the difference on learning via reading or listening. It has been shown that the modality is invariant to the amount of comprehension. Individuals recalled an equal amount of information regardless whether they listened to an audiobook or read it from an electronic tablet (Rogowsky, 2016) Moreover, brain activities recorder via MRI has shown similar patterns whether the input be spoken or written. (Deniz, 2019)<br><br>
+
+									Audiobooks have now given individuals the opportunity to learn while being on the move with minimal or no loss of comprehension compared to reading. The demand for audiobooks in Metro Manila exists and this study presents a new way of recommending books suitable for conversion to audio.
 								</p>
 								<h3>Methodology</h3>
 								<p style="margin-bottom: 0;">The following steps were taken for this study:</p>
 								<ol>
-									<li>Data Collection and Preprocessing</li>
+									<li>Collection and description of Amazon Customer Reviews Dataset from the AWS Open Data</li>
 									<li>
-										Data Wrangling
+										Data preparation and selection
 										<ul style="margin-bottom: 0;">
-											<li>Conversion to nodes and edges</li>
-											<li>Creation of bipartite network</li>
+											<li>Text data feature extraction</li>
+											<li>Binning the ratings</li>
 										</ul>
 									</li>
-									<li>
-										Network Analysis
-										<ul>
-											<li>Projected graphs</li>
-											<li>Communities</li>
-											<li>Centrality measures</li>
-										</ul>
-									</li>
+									<li>Machine learning models</li>
+									<li>Performing Frequent Itemset Mining (FIM)</li>
 								</ol>
 								<footer>
 									<ul class="actions">
-										<li><a href="https://github.com/jeddahlyngacera/bailiwicks-network/blob/master/5%20-%20Network%20Analysis%20on%202019%20Elections%20(Ilocos%20Region).md" class="button">See code in GitHub</a></li>
+										<li><a href="https://github.com/jeddahlyngacera/amazon-audiobooks" class="button">See code in GitHub</a></li>
 									</ul>
 								</footer>
-								<p style="font-size: 0.9em;"><i>If you wish to have a copy of the technical paper, data, or the full code used in this project, kindly contact us via <a href="mailto:jeddahlyn.gacera@gmail.com">e-mail</a> or <a href="https://www.linkedin.com/in/jeddahlyn-gacera/">LinkedIn</a>.</i></p>
+								<p style="font-size: 0.9em;"><i>If you wish to have a copy of the technical paper for this project, kindly contact us via <a href="mailto:jeddahlyn.gacera@gmail.com">e-mail</a> or <a href="https://www.linkedin.com/in/jeddahlyn-gacera/">LinkedIn</a>.</i></p>
 								
 							</article>
 					</div>
