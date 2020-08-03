@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Theme Extraction by Unraveling Clusters of Reddit Post Titles</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" href="../images/icon.svg">
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body class="single is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="../index.html">J. Gacera | HOME</a></h1>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<article class="post" style="margin: 0 5% 1% 5%">
+								<header>
+									<div class="title">
+										<h2>Theme Extraction by Unraveling Clusters of Reddit Post Titles</h2>
+										<p>Unsupervised Clustering on Text Data</p>
+									</div>
+									<div class="meta">
+										<time class="published" datetime="2019-07-03">July 3, 2019</time>
+										<a href="https://www.linkedin.com/in/jeddahlyn-gacera/" class="author"><span class="name">Jeddahlyn Gacera</span></a>
+									</div>
+								</header>
+								<img src="revealing-subreddits2.PNG" width="100%" alt="">
+								<h3>Executive Summary</h3>
+								<p align="justify">
+									Reddit is one of the most popular social media websites that allows users to submit and rate content such as links, text posts, images, GIFs, videos, etc. which may be from a variety of topics including news, science, movies, or food, posted by members organized by subject into boards called subreddits. This study aims to identify the subreddits or themes from a sample of 6000 post titles from the file reddit-dmw-sample.txt using two types of clustering methods such as representative-based (𝑘-means) and hierarchical (Ward's agglomerative method) clustering.<br><br>
+									
+									Depending on the clustering method used, the number of clusters (𝑘) recommended differed. This is because of their different approach and tests used to determine 𝑘. For representative-based, 7 clusters were made, while there are 10 for hierarchical. Although different, resulting themes were quite similar. The following themes were extracted: general inquires (advice), US presidential elections (Trump, Clinton, and Sanders), New Year (2016), gaming (video and online), food, speeding ticket, tech support, and vine compilations.
+								</p>
+								<h3>Methodology</h3>
+								<p style="margin-bottom: 0;">The following steps were taken for this study:</p>
+								<ol>
+									<li>
+										Data Description and Processing
+										<ul style="margin-bottom: 0;">
+											<li>Cleaning text data</li>
+											<li>Lemmatization</li>
+										</ul>
+									</li>
+									<li>Exploratory Data Analysis</li>
+									<li>
+										Models
+										<ul style="margin-bottom: 0;">
+											<li>𝑘-means clustering</li>
+											<li>Ward's method</li>
+										</ul>
+									</li>
+									<li>Results and Recommendations</li>
+								</ol>
+								<footer>
+									<ul class="actions">
+										<li><a href="https://github.com/jeddahlyngacera/revealing-subreddits/blob/master/revealing-subreddits.ipynb" class="button">See code in GitHub</a></li>
+									</ul>
+								</footer>
+								
+							</article>
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/jeddahlyn-gacera/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/jeddahlyngacera" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="mailto:jeddahlyn.gacera@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
